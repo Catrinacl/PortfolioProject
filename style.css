@@ -1,9 +1,5 @@
-/* GENERAL */
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-
+/* the * = all elements  */
 * {
     margin: 0;
     padding: 0;
@@ -155,35 +151,88 @@ a:hover {
     
 }
 
-/* SECTIONS */
+/* Intro section */
 
-img {
+#introProfile {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+}
+
+#introProfile * {
+    color: white;
+}
+
+.profilePic {
     width: 400px;
     aspect-ratio: 1 / 1;    /* Forces the image to be a square */
     object-fit: cover;      /* Prevents the image from looking squashed */
     border-radius: 50%;
 }
 
-.section__text {
+/* About section */
+#aboutMe {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin-top: 200px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+#aboutMe * {
     color: white;
 }
 
-.section__text__p1 {
+#techSkills {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 20px;
+    max-width: 600px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+#techSkills * {
     color: white;
 }
 
-.section__text__p2 {
-    color: white;
+.techSkills_pic-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
+.techSkills_pic-container img {
+    height: 100px; /* Prøv at skrue op for størrelsen her */
+    width: 100px;
+    object-fit: contain; /* Sikrer at logoet ikke bliver strakt indeni kassen */
+    border-radius: 15px; /* Lidt mere moderne afrunding */
+    background-color: white; /* Hvis kasserne ikke er en del af billedet, kan du tilføje det her */
+    padding: 10px;
+}
+
+/*
 .btnDownloadCV {
-    height: 30px;
-    width: 110px;
-    border-radius: 10%;
+    padding: 8px 20px;      
+    border-radius: 8px;     
+    border: 2px solid #333; 
+    background-color: #fff;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-.btnContactInfo {
-    height: 30px;
-    width: 110px;
-    border-radius: 10%;
+
+.btnDownloadCV:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
 }
+*/
