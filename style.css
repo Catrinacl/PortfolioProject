@@ -210,11 +210,11 @@ a:hover {
 }
 
 .techSkills_pic-container img {
-    height: 100px; /* Prøv at skrue op for størrelsen her */
+    height: 100px;
     width: 100px;
-    object-fit: contain; /* Sikrer at logoet ikke bliver strakt indeni kassen */
-    border-radius: 15px; /* Lidt mere moderne afrunding */
-    background-color: white; /* Hvis kasserne ikke er en del af billedet, kan du tilføje det her */
+    object-fit: contain;
+    border-radius: 15px;
+    background-color: white;
     padding: 10px;
 }
 
