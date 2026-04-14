@@ -7,3 +7,22 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure all circles are at the same spot */
+  .right::after {
+    left: 15px;
+  }
+}
