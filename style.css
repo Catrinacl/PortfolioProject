@@ -295,3 +295,19 @@ a:hover {
     transform: translateY(-2px);
 }
 
+/* ----------------- Project section ----------------- */
+#projectSection {
+    margin-left: 50px;
+    margin-top: 150px;
+}
+
+#projectSection h1 {
+  color: white;
+}
+
+.sallPic {
+  height: 500px; /* Tilføjet px */
+  width: 600px;  /* Tilføjet px */
+  object-fit: contain;
+  
+}
