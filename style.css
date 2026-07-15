@@ -301,13 +301,51 @@ a:hover {
     margin-top: 150px;
 }
 
-#projectSection h1 {
+#projectSection, #projectSection p {
   color: white;
 }
 
-.sallPic {
-  height: 500px; /* Tilføjet px */
-  width: 600px;  /* Tilføjet px */
+img {
+  height: 500px;
+  width: 600px; 
   object-fit: contain;
-  
+}
+
+.project-tags {
+    list-style-type: disc; /* Laver bindestregen om til en rund prik */
+    margin-left: 20px; /* Giver luft ind til prikken */
+}
+
+.project-tags li {
+    color: white;
+}
+
+/* SALL WHISKY */
+.SallWhiskyProjekt {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* Venstrestiller al tekst */
+    text-align: left;
+}
+
+.SallBeskrivelse {
+  margin-top: 40px;
+}
+
+#overskriftTeknologierSall {
+  margin-top: 20px;
+}
+
+/* NETVÆRKSSPIL */
+.NetvaerksspilProjekt {
+  display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* Venstrestiller al tekst */
+    text-align: left;
+}
+
+.NetvaerkBeskrivelse {
+  margin-top: 20px;
 }
