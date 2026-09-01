@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Catrina Cole Lynegaard</title>
+    <link rel="icon" type="image/x-icon" href="assets/c-icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
     <script src="script.js" defer></script>
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <nav id="desktop-nav">
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">Om</a></li>
-                <li><a href="#experience">Erfaring</a></li>
-                <li><a href="#projects">Projekter</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </div>
+        <ul class="nav-links">
+            <li><a href="#about">Om</a></li>
+            <li><a href="#experience">Erfaring</a></li>
+            <li><a href="#projects">Projekter</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Catrina Lynegaard</div>
+        <div class="logoName">Catrina Lynegaard</div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -42,13 +41,12 @@
             <img src="assets/Portraet.jpeg" class="profilePic" alt="Catrina Lynegaard Profile Picture">
         </div>
         <div class="introProfile_text">
-            <p class="introProfile_text_p1">Hej, mit navn er</p>
-            <h1 class="myName">Catrina Cole Lynegaard</h1>
-            <p class="introProfile_text_p2">Datamatiker studerende</p>
-            <p class="introProfile_text_p3">Engageret og lærelysten 4. semester studerende</p>
+            <h1>Catrina Cole Lynegaard</h1>
+            <p>Datamatiker studerende</p>
+            <p>Engageret og lærelysten 4. semester studerende</p>
         </div>
     </section>
-    <section id="aboutMe">
+    <section id="about">
         <div class="aboutMe_text">
             <h1>Om mig</h1>
             <p>Hej, jeg hedder Catrina. Jeg læser til datamatiker, og jeg er på nuværende tidspunkt i gang med mit 4. semester. 
@@ -70,9 +68,11 @@
             <img src="assets/mssqlLogo.png" alt="MSSQL">
             <img src="assets/GitLogo.png" alt="Git">
             <img src="assets/Figma-logo.png" alt="Figma">
+            <img src="assets/swiftLogo.png" alt="Swift">
+            <img src="assets/csharpLogo.png" alt="C#">
         </div>
     </section>
-    <section id="experienceSection">
+    <section id="experience">
         <h1>Erfaring</h1>
         <div class="timeline">
             <div class="containerRight">
@@ -94,33 +94,106 @@
             </div>
         </div>
         <div class="btn-container">
-            <button class="btnDownloadCV" onclick="window.open('./assets/CVportfolio.pdf')">
+            <button class="btnDownloadCV" onclick="window.open('./assets/CV_CatrinaLynegaard.pdf')">
                 Download CV
             </button>
         </div>
     </section>
-    <section id="projectSection">
+    <section id="projects">
         <h1>Projekter</h1>
         <div class="SallWhiskyProjekt">
-            <img src="assets/SallWhisky.png" class="sallPic" alt="Sall Whisky Lagersystem">
+            <div class="project-img-box">
+                <img src="assets/SallWhisky.png" class="sallPic" alt="Sall Whisky Lagersystem">
+                <a href="https://github.com/Catrinacl/2SemesterProject.git" target="_blank" rel="noopener noreferrer" class="github-overlay-btn" aria-label="Se på GitHub">
+                    <i class="devicon-github-original"></i>
+                </a>
+            </div>
             <div class="SallBeskrivelse">
                 <h2>Lagerstyringssystem | 2. semester projekt </h2>
                 <p>I samarbejde med min gruppe udarbejdede vi et digitalt lagerstyringssystem til destilleriet Sall Whisky. Systemet erstatter den manuelle papirproces og sikrer fuld sporbarhed i produktionen - lige fra destillering (New Make) og fadlagring til det færdige produkt.</p>
-                <h3 id="overskriftTeknologierSall">Værktøjer og teknologier</h3>
-                <ul class="project-tags">
-                    <li><strong>Kode & GUI:</strong> Java, JavaFX</li>
+                <h3>Værktøjer og teknologier</h3>
+                <ul>
+                    <li><strong>GUI:</strong> JavaFX</li>
                     <li><strong>Systemudvikling:</strong> OOAD, UML (sekvens-, klasse- og domænemodeller)</li>
                     <li><strong>Kvalitetssikring:</strong> JUnit</li>
                     <li><strong>Samarbejde & styring:</strong> Git/GitHub, agil udvikling (Unified Process) og MoSCoW-prioritering.</li>
                 </ul>
+                <div class="tech-badge-container">
+                    <span class="tech-badge">
+                        <i class="devicon-java-plain"></i> Java
+                    </span>
+                </div>
             </div>
         </div>
         <div class="NetvaerksspilProjekt">
-            <img src="assets/Netvaerksspil.png" alt="Netværksspil">
+            <div class="project-img-box">
+                <img src="assets/Netvaerksspil.png" alt="Netværksspil">
+                <a href="https://github.com/Catrinacl/Networkgame.git" target="_blank" rel="noopener noreferrer" class="github-overlay-btn" aria-label="Se på GitHub">
+                    <i class="devicon-github-original"></i>
+                </a>
+            </div>
             <div class="NetvaerkBeskrivelse">
                 <h2>Netværksspil</h2>
+                <p>I dette projekt udviklede min gruppe og jeg et netværksbaseret multiplayer-spil i realtid. Spillet går ud på, at flere spillere kan bevæge sig rundt i den samme labyrint samtidigt. Hver gang en spiller bevæger sig, sendes informationen til en central server, der lynhurtigt synkroniserer placeringer og point ud til alle de andre forbundne klienter.</p>
+                <h3>Værktøjer og teknologier</h3>
+                <ul>
+                    <li><strong>GUI:</strong> JavaFX</li>
+                    <li><strong>Netværksarkitektur:</strong> TCP sockets (ServerSocket og Socket)</li>
+                    <li><strong>Multithreading:</strong> Asynkron trådhåndtering (Thread og Platform.runLater), så netværksdata hentes i baggrunden uden at fryse spillets GUI.</li>
+                    <li><strong>Trådsynkronisering:</strong> Sikring mod datafejl (race conditions) ved brug af synchronized på delte spillerlister.</li>
+                </ul>
+                <div class="tech-badge-container">
+                    <span class="tech-badge">
+                        <i class="devicon-java-plain"></i> Java
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="ChatroomProjekt">
+            <div class="project-img-box">
+                <img src="assets/chatroom.jpg" alt="Chatroom">
+                <a href="https://github.com/Catrinacl/ChatRoom-Project.git" target="_blank" rel="noopener noreferrer" class="github-overlay-btn" aria-label="Se på GitHub">
+                    <i class="devicon-github-original"></i>
+                </a>
+            </div>
+            <div class="ChatroomBeskrivelse">
+                <h2>Chatroom | 3. semester projekt</h2>
+                <p>En chat-applikation med integreret brugerstyring. I systemet kan man logge ind, oprette chatrum, skrive beskeder og administrere indhold. For at demonstrere adgangskontrol implementerede vi et rollesystem, hvor kun administratorer (niveau 3) kan oprette, redigere og slette chatrum samt tilgå den samlede brugerliste.</p>
+                <h3>Værktøjer og teknologier</h3>
+                <ul>
+                    <li><strong>Database:</strong> Persistent, asynkron lagring i strukturerede JSON-filer (via Node fs/promises).</li>
+                    <li><strong>Sikkerhed & Session</strong> express-session til login-validering og niveaubaseret adgangskontrol.</li>
+                </ul>
+                <div class="tech-badge-container">
+                    <span class="tech-badge">
+                        <i class="devicon-nodejs-plain"></i> Node.js
+                    </span>
+                    <span class="tech-badge">
+                        <i class="devicon-javascript-plain"></i> JavaScript
+                    </span>
+                    <span class="tech-badge">
+                        <i class="devicon-html5-plain"></i> Pug (HTML5)
+                    </span>
+                    <span class="tech-badge">
+                        <i class="devicon-css3-plain"></i> CSS
+                    </span>
+                </div>
             </div>
         </div>
     </section>
+    <section id="contact">
+        <h1>Kontakt</h1>
+        <div class="contact-item">
+            <span class="material-symbols-outlined email-icon">mail</span>
+            <a href="mailto:catrinalynegaard@gmail.com"> catrinalynegaard@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <i class="devicon-linkedin-plain linkedin-icon"></i>
+            <a href="https://linkedin.com/in/catrina-cole-lynegaard-567aa1252" target="_blank"> LinkedIn</a>
+        </div>
+    </section>
+    <footer>
+        <small>Made by Catrina ♡</small>
+    </footer>
 </body>
 </html>

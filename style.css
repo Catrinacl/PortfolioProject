@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-/* the * = all elements  */
+/* * = alle elementer  */
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +7,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: pink;
+  background-color: palevioletred;
   overflow-x: hidden;
+  
 }
 
 html {
@@ -28,15 +29,21 @@ a,
 
 /* ----------------- DESKTOP NAV ----------------- */
 
-nav,
-.nav-links {
+nav, .nav-links {
   display: flex;
 }
 
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 12vh;
+  /* sticky menu */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* så menuen ligger øverst ovenpå fx billeder og tekst */
+  background-color: palevioletred;
 }
 
 .nav-links {
@@ -52,17 +59,17 @@ a {
 }
 
 a:hover {
-  color: palevioletred;
+  color: pink;
   text-decoration: underline;
   text-underline-offset: 1rem;
 }
 
-.logo {
+.logoName {
   color: white;
   font-size: 3rem;
 }
 
-.logo:hover {
+.logoName:hover {
   cursor: default;
 }
 
@@ -94,14 +101,17 @@ a:hover {
 }
 
 .menu-links {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 12vh;
   right: 0;
-  background-color: pink;
+  background-color: palevioletred;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.15); /* Skygge mod venstre */
+  border-radius: 0 0 0 10px;
 }
 
 .menu-links a {
@@ -111,7 +121,6 @@ a:hover {
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -146,7 +155,7 @@ a:hover {
   transform: none;
 }
 
-/* ----------------- Intro section ----------------- */
+/* ----------------- INTRO SECTION ----------------- */
 
 #introProfile {
   display: flex;
@@ -161,14 +170,19 @@ a:hover {
 }
 
 .profilePic {
-  width: 400px;
+  margin-top: 110px;
+  width: 350px;
   aspect-ratio: 1 / 1; /* Forces the image to be a square */
   object-fit: cover; /* Prevents the image from looking squashed */
   border-radius: 50%;
 }
 
-/* ----------------- About section ----------------- */
-#aboutMe {
+.introProfile_text {
+  text-align: center;
+}
+
+/* ----------------- ABOUT SECTION ----------------- */
+#about {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,7 +194,7 @@ a:hover {
   margin-left: 50px;
 }
 
-#aboutMe * {
+#about * {
   color: white;
 }
 
@@ -200,7 +214,7 @@ a:hover {
 
 .techSkills_pic-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
@@ -213,13 +227,13 @@ a:hover {
   padding: 10px;
 }
 
-/* ----------------- Experience section ----------------- */
-#experienceSection {
+/* ----------------- EXPERIENCE SECTION ----------------- */
+#experience {
     margin-left: 50px;
     margin-top: 150px;
 }
 
-#experienceSection h1 {
+#experience h1 {
     color: white;
 }
 
@@ -252,7 +266,7 @@ a:hover {
     position: absolute;
     width: 16px;
     height: 16px;
-    background-color: palevioletred;
+    background-color: pink;
     border-radius: 50%;
     left: -35.5px; /* Skubber cirklen hen ovenpå stregen */
     top: 5px;
@@ -295,57 +309,187 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* ----------------- Project section ----------------- */
-#projectSection {
+/* ----------------- PROJECT SECTION ----------------- */
+#projects {
+  margin-left: 50px;
+  margin-top: 150px;
+}
+
+#projects, #projects p {
+  color: white;
+}
+
+#projects h1 {
+  margin-bottom: 20px;
+}
+
+.project-img-box {
+  width: 100%;
+  max-width: 600px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.github-overlay-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* hover-effekt på github ikonet*/
+.project-img-box:hover .github-overlay-btn,
+.github-overlay-btn:hover {
+  opacity: 1;
+  background-color: white;
+  color: palevioletred;
+  transform: scale(1.1);
+}
+
+#projects img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#projects li {
+    color: white;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#projects h3 {
+    margin-top: 20px;
+}
+
+.SallWhiskyProjekt, 
+.NetvaerksspilProjekt, 
+.ChatroomProjekt {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 80px;
+    align-items: flex-start;
+}
+
+.SallBeskrivelse {
+    margin-top: 40px;
+}
+
+.NetvaerkBeskrivelse {
+    margin-top: 15px;
+}
+
+.ChatroomBeskrivelse {
+    margin-top: 25px;
+}
+
+/* BADGES */
+.tech-badge-container {
+    display: flex;
+    flex-wrap: wrap; /* Sørger for at de hopper ned på næste linje, hvis der er mange */
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* badge boksen */
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Luft mellem ikon og tekst */
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Sørger for at ikonet inden i badget skalerer pænt */
+.tech-badge i {
+    font-size: 1.1rem;
+}
+
+/* ----------------- CONTACT SECTION ----------------- */
+#contact {
     margin-left: 50px;
     margin-top: 150px;
 }
 
-#projectSection, #projectSection p {
-  color: white;
-}
-
-img {
-  height: 500px;
-  width: 600px; 
-  object-fit: contain;
-}
-
-.project-tags {
-    list-style-type: disc; /* Laver bindestregen om til en rund prik */
-    margin-left: 20px; /* Giver luft ind til prikken */
-}
-
-.project-tags li {
+#contact {
     color: white;
 }
 
-/* SALL WHISKY */
-.SallWhiskyProjekt {
+.contact-item {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    /* Venstrestiller al tekst */
-    text-align: left;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
 }
 
-.SallBeskrivelse {
-  margin-top: 40px;
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: lighter;
 }
 
-#overskriftTeknologierSall {
-  margin-top: 20px;
+.email-icon, .linkedin-icon {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-align: center; /* ellers vil email ikonet ikke være centreret */
 }
 
-/* NETVÆRKSSPIL */
-.NetvaerksspilProjekt {
-  display: flex;
-    flex-direction: row;
-    gap: 20px;
-    /* Venstrestiller al tekst */
-    text-align: left;
+/* Material Symbols ikon (email) */
+.material-symbols-outlined.email-icon {
+    font-size: 30px !important;
+    font-variation-settings: 'OPSZ' 30;
+    margin: 0;
+    padding: 0;
 }
 
-.NetvaerkBeskrivelse {
-  margin-top: 20px;
+/* Devicon ikon (linkedin) */
+.linkedin-icon {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-item a:hover {
+    color: pink;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+/* Så overskriften IKKE gemmer sig bag min sticky menu */
+#about, #techSkills, #experience, #projects, #contact {
+  scroll-margin-top: 20vh; 
+}
+
+footer {
+  margin-top: 150px;
+  text-align: center;
+  color: white;
+  padding: 5px;
 }

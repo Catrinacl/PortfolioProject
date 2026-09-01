@@ -1,28 +1,66 @@
 @media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
-    }
+  #desktop-nav {
+    display: none;
+  }
 
-    #hamburger-nav {
-        display: flex;
-    }
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .SallWhiskyProjekt, 
+  .NetvaerksspilProjekt, 
+  .ChatroomProjekt {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .project-img-box {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
-/* Place the timelime to the left */
+  #experience {
+    margin-left: 20px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
   .timeline::after {
-    left: 31px;
+    left: 7px;
+    width: 1px;
   }
 
-/* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+  /* cirklerne oven på stregen */
+  .content1::before, 
+  .content2::before, 
+  .content3::before {
+    left: -29px;
+    width: 12px;
+    height: 12px;
+    border: 2px;
   }
 
-/* Make sure all circles are at the same spot */
-  .right::after {
-    left: 15px;
+
+  /* ----------------- PROJECTS  ----------------- */
+  #projects {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+  }
+
+  .tech-badge-container {
+    gap: 8px;
+  }
+
+  .tech-badge {
+    padding: 5px 10px;
+    font-size: 0.8rem;
   }
 }
