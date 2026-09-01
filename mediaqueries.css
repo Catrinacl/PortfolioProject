@@ -23,6 +23,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .techSkills_pic-container {
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #experience {
     margin-left: 20px;

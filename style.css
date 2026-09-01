@@ -214,17 +214,20 @@ a:hover {
 
 .techSkills_pic-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 100px);
   gap: 20px;
+  max-width: 100%;
 }
 
 .techSkills_pic-container img {
   height: 100px;
   width: 100px;
+  flex: 0 0 90px;
   object-fit: contain;
   border-radius: 15px;
   background-color: white;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 /* ----------------- EXPERIENCE SECTION ----------------- */
