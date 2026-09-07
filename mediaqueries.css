@@ -39,7 +39,12 @@
   }
 
   .logoName {
-    font-size: 2rem;
+    font-size: 1rem;
+  }
+
+  .profilePic {
+    width: 220px;
+    margin-top: 90px;
   }
 
   #about, #techSkills, #experience, #projects, #contact, footer {
