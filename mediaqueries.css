@@ -31,10 +31,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  #experience {
-    margin-left: 20px;
-  }
-
   .timeline {
     padding-left: 30px;
   }
@@ -51,14 +47,11 @@
     left: -29px;
     width: 12px;
     height: 12px;
-    border: 2px;
   }
 
 
   /* ----------------- PROJECTS  ----------------- */
   #projects {
-    margin-left: 20px;
-    margin-right: 20px;
     margin-top: 100px;
   }
 

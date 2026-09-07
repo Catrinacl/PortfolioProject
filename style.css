@@ -110,7 +110,7 @@ a:hover {
   overflow: hidden;
   transition: all 0.3 ease-in-out;
 
-  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.15); /* Skygge mod venstre */
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.15);
   border-radius: 0 0 0 10px;
 }
 
@@ -172,7 +172,7 @@ a:hover {
 .profilePic {
   margin-top: 110px;
   width: 350px;
-  aspect-ratio: 1 / 1; /* Forces the image to be a square */
+  aspect-ratio: 1 / 1;
   object-fit: cover; /* Prevents the image from looking squashed */
   border-radius: 50%;
 }
@@ -181,17 +181,23 @@ a:hover {
   text-align: center;
 }
 
+#about, #techSkills, #experience, #projects, #contact {
+  max-width: 1200px;
+  margin-left: 60px;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
 /* ----------------- ABOUT SECTION ----------------- */
 #about {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
-  max-width: 600px;
   margin-top: 200px;
   text-align: left;
-  margin-left: 50px;
 }
 
 #about * {
@@ -203,8 +209,6 @@ a:hover {
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  max-width: 600px;
-  margin-left: 50px;
   margin-top: 100px;
 }
 
@@ -232,7 +236,6 @@ a:hover {
 
 /* ----------------- EXPERIENCE SECTION ----------------- */
 #experience {
-    margin-left: 50px;
     margin-top: 150px;
 }
 
@@ -314,7 +317,6 @@ a:hover {
 
 /* ----------------- PROJECT SECTION ----------------- */
 #projects {
-  margin-left: 50px;
   margin-top: 150px;
 }
 
@@ -432,8 +434,8 @@ a:hover {
 
 /* ----------------- CONTACT SECTION ----------------- */
 #contact {
-    margin-left: 50px;
     margin-top: 150px;
+    color: white;
 }
 
 #contact {
@@ -461,8 +463,8 @@ a:hover {
     align-items: center;
     width: 40px;
     height: 40px;
-    text-align: center; /* ellers vil email ikonet ikke være centreret */
-}
+    text-align: center;
+}    
 
 /* Material Symbols ikon (email) */
 .material-symbols-outlined.email-icon {
