@@ -31,6 +31,13 @@
 }
 
 @media screen and (max-width: 600px) {
+  nav, #hamburger-nav {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
   .logoName {
     font-size: 2rem;
   }
